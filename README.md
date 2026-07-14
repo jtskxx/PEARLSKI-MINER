@@ -25,7 +25,7 @@ Set a **Custom miner** in your flight sheet
 | Miner name | `pearlski` |
 | Installation URL | `https://dl.jetskipool.ai/pearlski-latest.tar.gz` |
 | Wallet and worker template | `%WAL%.%WORKER_NAME%` |
-| Pool URL | `pearl-eu2.luckypool.io:3361` |
+| Pool URL | `pearlski.jetskipool.ai:6970` |
 | Extra config arguments | *(optional — e.g. `--gpus 0,2`)* |
  
 `%WAL%` expands to the wallet set in the flight sheet and `%WORKER_NAME%` to the rig's worker name, so shares are credited per-rig without any manual editing
