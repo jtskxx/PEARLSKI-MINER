@@ -1,20 +1,19 @@
 # PEARLSKI Miner
 
-**A high-performance CUDA miner for Pearl proof-of-work**
+**State-of-the-art CUDA miner for Pearl proof-of-work**
 
-PEARLSKI uses architecture-specific CUDA kernels to deliver maximum sustained hashrate while preserving full Pearl proof-of-work correctness 
-Mixed NVIDIA GPU rigs are detected and configured automatically
+PEARLSKI is powered by precision-tuned CUDA kernels built for maximum performance and sustained hashrate on every compatible NVIDIA GPU
 
 ---
 
-## Supported GPUs
+## Features
 
-| Architecture | Compute capability | Example cards |
-|---|---|---|
-| Ampere | `sm_80` / `sm_86` | RTX 30 series, A100, A40 |
-| Ada Lovelace | `sm_89` | RTX 40 series, L4, L40S |
-| Hopper | `sm_90` | H100, H200 |
-| Blackwell | `sm_120` | RTX 50 series |
+- **Linux, Hive OS, and Windows support**
+- **Precision-tuned CUDA kernels** engineered for the highest sustained Pearl hashrate
+- **Per-GPU kernel mapping** — applies the optimal tune to every GPU
+- **Automatic mixed-rig support** — detects and configures compatible NVIDIA GPUs
+- **Flexible multi-GPU control** — mine on all devices or select individual GPUs
+- **CMP 170HX compute unlock** — unlocks and tunes restricted FMA throughput
 
 ## HiveOS
  
@@ -23,7 +22,7 @@ Set a **Custom miner** in your flight sheet
 | Field | Value |
 |---|---|
 | Miner name | `pearlski` |
-| Installation URL | `https://dl.jetskipool.ai/pearlski-latest.tar.gz` |
+| Installation URL | `https://dl2.jetskipool.ai/pearlski-latest.tar.gz` |
 | Wallet and worker template | `%WAL%.%WORKER_NAME%` |
 | Pool URL | `pearlski.jetskipool.ai:6970` |
 | Extra config arguments | *(optional — e.g. `--gpus 0,2`)* |
@@ -31,7 +30,7 @@ Set a **Custom miner** in your flight sheet
 `%WAL%` expands to the wallet set in the flight sheet and `%WORKER_NAME%` to the rig's worker name, so shares are credited per-rig without any manual editing
 
 ## Run
-Download the latest Linux archive from the [Releases](../../releases) page, then extract and run:
+Download the latest Linux/Windows build from the [Releases](../../releases) page, then extract and run:
 
 ```bash
 ./pearlski-miner --user prl-wallet --worker rig01 --pool pearlski.jetskipool.ai:6970
@@ -56,7 +55,7 @@ PEARLSKI can mine on any pool just point `--pool` at the endpoint you want
 
 ```bash
 ./pearlski-miner --list-gpus            # inspect detected devices
-./pearlski-miner --gpus 0,2 ...         # mine on devices 0 and 2 only
+./pearlski-miner --gpus 0,2        # mine on devices 0 and 2 only
 ```
 
 ## Options
@@ -71,7 +70,7 @@ PEARLSKI can mine on any pool just point `--pool` at the endpoint you want
 
 ## Developer Fee
 
-PEARLSKI has a transparent **1% developer fee**
+PEARLSKI has a transparent **2% developer fee**
 
 ---
 
