@@ -14,6 +14,7 @@ PEARLSKI is powered by precision-tuned CUDA kernels built for maximum performanc
 - **Automatic mixed-rig support** — detects and configures compatible NVIDIA GPUs
 - **Flexible multi-GPU control** — mine on all devices or select individual GPUs
 - **CMP 170HX compute unlock** — unlocks and tunes restricted FMA throughput
+- **CMP 90HX compute unlock** — unlocks and tunes restricted FMA throughput
 
 ## HiveOS
  
